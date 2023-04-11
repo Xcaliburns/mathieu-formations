@@ -1,0 +1,133 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+    display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+blockquote, q{
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content: none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+
+
+
+.Header{
+    display: flex;
+    flex-direction: column;
+    height: 17%;
+    background-color: #362E17;
+    h1{
+        font-size: 3rem;
+        color:white;
+        margin-bottom: 2rem;
+        margin-left: 3rem;
+        margin-top: 2rem;
+    }
+    .Navbar{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: x-large;
+        justify-content: space-around;
+         margin-bottom: 2rem;
+       
+    .nav-link {          
+        text-decoration: none;
+        color: whitesmoke;  
+}
+    }
+
+}
+
+.Accueil{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    height:100vh;
+    width: 100%;
+    overflow-x: hidden;
+    .background-section{
+    background-image:url("https://c.pxhere.com/images/5d/aa/5b8a87929bfa39029e53187bc233-1593813.jpg!d") ;
+    background-size:cover;
+    background-repeat: no-repeat;
+     height:100vh;
+    width: 100%;
+    h1{font-size: 3rem;
+        margin-left: 5%;
+        margin-top: 5%;
+        }
+           .free{
+            display: flex;
+            justify-content: center;
+            height: 30%;
+           
+        }
+     .reussite{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: end;
+        font-size: xx-large;
+        margin-right: 10% ;
+        .xp-texte{
+            display: flex;
+              flex-direction: column;
+            align-items: center;
+            justify-content: center;
+             width:10rem;
+        height:10rem;
+        border-radius: 50%;
+          background-color: #362E17;
+            margin-right: 2rem;
+            margin-top: 10%;
+             color: aliceblue;
+        }
+     .xp-pourcent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+       
+       
+     }
+
+     }   
+    }
+}
