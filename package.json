@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Xcaliburns/mathieu-formations.git" ,
+  "homepage": "https://git@github.com:Xcaliburns/mathieu-formations.git" ,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
