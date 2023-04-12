@@ -5,21 +5,22 @@ function Navbar() {
 
       const navigate = useNavigate();
   return (
-    <div className='Header'><h1>Mathieu Abruzzo Formation</h1>
+    <div className='Header'><h1 className='navbar-logo'>Mathieu Abruzzo Formation</h1>
         <ul className='Navbar'>
-            <li> <Link  to="/" className="nav-link">
+            <li className='Navbar-item'> <Link  to="/" className="nav-link">
             Accueil
           </Link></li>
-            <li> <Link to="/experience" className="nav-link">
+            <li className='Navbar-item'> <Link to="/experience" className="nav-link">
             Experience
           </Link></li>
-            <li> <Link to="/gallery" className="nav-link">
+            <li className='Navbar-item'> <Link to="/gallery" className="nav-link">
                 Galerie
           </Link></li>
-            <li> <Link to="/contact" className="nav-link">
+            <li className='Navbar-item'> <Link to="/contact" className="nav-link">
            Contact
           </Link></li>
         </ul>
+        <button className='Navbar-burger'><span className="burger-bar"></span></button>
     </div>
   )
 }
