@@ -1,18 +1,26 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import Photo from "../assets/photoMathieu.png"
 function Accueil() {
   return (
     <div className="Accueil">
       <Navbar />
       <div className="background-section">
-
-        <h1 className="slogan">
-            L'expérience à votre service
+        <div className="slogan">
+          {/* <img src={Photo} alt="photo" className="photo"  /> */}
+          <div className="slogan-texte">
+        <h1 className="slogan-titre">
+           Mathieu Formation
         </h1>
-         <div className="free"></div>
+        <h2 className="slogan-type">CONDUITE ECO POIDS LOURDS</h2>
+        </div>
+       
+         <div className="free">
+          La formation poids lourd qui vous mène loin.
+         </div>
+          </div>
         <div className="reussite">           
-            <div className="xp-texte"> Réussite<div className="xp-pourcent">98%</div></div>
-            
+            <div className="xp-texte">Réussite<div className="xp-pourcent">100%</div></div> 
 
         </div>
         

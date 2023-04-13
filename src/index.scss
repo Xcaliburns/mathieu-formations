@@ -10,16 +10,16 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
     border: 0;
     font-size: 100%;
     font: inherit;
-    // font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     vertical-align: baseline;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: none;
 }
 
-footer, header, nav, section, main{
-    display: block;
-}
+// footer, header, nav, section, main{
+//     display: block;
+// }
 
 body{
     line-height: 1;
@@ -58,30 +58,38 @@ input{
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding:1rem;
+    width: 100%;
+   
     height: 17%;
     background-color: #362E17;
-    h1{
+   .navbar-logo{
         font-size: 3rem;
         color:white;
         margin-bottom: 2rem;
         margin-left: 3rem;
         margin-top: 2rem;
+        width:15%;
     }
     .Navbar{
-        width: 100%;
+        width:80%;
         display: flex;
-        flex-direction: row;
-        font-size: x-large;
+        align-items: center;
+        flex-direction: row;       
         justify-content: space-around;
-         margin-bottom: 2rem;
+        //  margin-bottom: 2rem;
+         margin-top: 5%;
+         
        
-    .nav-link {          
+    .nav-link {       
+        padding:  0 0.3rem; 
+        color:inherit;
         text-decoration: none;
         color: whitesmoke;  
 }
     }
-
+ 
 }
 
 .Accueil{
@@ -92,28 +100,74 @@ input{
     width: 100%;
     overflow-x: hidden;
     .background-section{
-    background-image:url("https://c.pxhere.com/images/5d/aa/5b8a87929bfa39029e53187bc233-1593813.jpg!d") ;
-    background-size:cover;
-    background-repeat: no-repeat;
-     height:100vh;
     width: 100%;
-    h1{font-size: 3rem;
-        margin-left: 5%;
-        margin-top: 5%;
+  height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2014/01/04/12/34/road-238458_960_720.jpg");
+  background-size: cover;
+  background-position-x: 45%;
+  background-position-y: center;
+  position: relative;
+  box-sizing: border-box;
+   .slogan{
+    display: flex;
+    flex-direction: column;
+    height:40%;
+   
+    .photo{   
+            
+        background-color: transparent;
+        border-radius: 40%;
+        scale:(0.5);
+        height: fit-content;
+        width: fit-content;
+        
+    }
+    .slogan-texte{
+        width:100%;
+       margin-top: 5%;;
+    .slogan-titre{
+    text-transform: capitalize;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: fit-content;
+    margin-left: 5%;
+    color:black;
+    font-size:5vW;
+        text-decoration-line: overline underline;
+        text-decoration-color: black;
+        text-decoration-thickness: 3px;
+       text-decoration-skip-ink:auto ;
+       line-height: 1.5;
+        margin-top: 8%;
+        margin-bottom: 1vw;
         }
+        .slogan-type{
+            color:black;
+            font-size: 3vw;
+           text-align:start;
+            margin-left: 5%;
+        }}}
            .free{
-            display: flex;
-            justify-content: center;
-            height: 30%;
+            font-weight: bolder;
+            font-size: 3vw;
+            display: flex;                
+            align-items: center;
+            justify-content: center;          
+            height: 5%;           
+            margin: auto;
+            margin-top:10%;
+           
            
         }
      .reussite{
+        margin-top: 3%;
         display: flex;
-        flex-direction: row;
         justify-content: flex-end;
-        align-content: end;
-        font-size: xx-large;
-        margin-right: 10% ;
+        font-size:2rem;
+        margin-right: 3% ;
+
         .xp-texte{
             display: flex;
               flex-direction: column;
@@ -126,6 +180,7 @@ input{
             margin-right: 2rem;
             margin-top: 10%;
              color: aliceblue;
+             line-height: 40px;
         }
      .xp-pourcent{
         display: flex;
@@ -138,4 +193,28 @@ input{
 
      }   
     }
+}
+
+.experience{
+    display:flex;
+    flex-direction: column;
+    
+    .CV{display: flex;
+        flex-direction: column;
+       
+    .col1{
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        width: 100%;
+        align-items: center;
+           
+    }
+    .col2{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color: green;
+            width:100%;
+    }}
 }
