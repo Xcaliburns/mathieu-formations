@@ -196,7 +196,7 @@ input {
 }
 
 .experience p {
-  line-height: 3rem;
+  line-height: 4vw;
 }
 
 .experience .date {
@@ -219,6 +219,7 @@ input {
 
 .experience .CV .col1 .metier {
   font-size: 3.5vw;
+  margin-bottom: 3%;
 }
 
 .experience .CV .col1 .name {
@@ -228,6 +229,7 @@ input {
   justify-content: center;
   width: 100%;
   font-size: 4vw;
+  margin-bottom: 3%;
 }
 
 .experience .CV .col1 .name .photo {
@@ -249,6 +251,9 @@ input {
 }
 
 .experience .CV .col1 .fonction .certif {
+  height: 6vw;
+  display: flex;
+  align-items: center;
   font-size: 5vw;
   padding: 0 5px;
   background-color: #a08945;
@@ -257,7 +262,7 @@ input {
   border-bottom: 2px solid #362E17;
   box-shadow: 8px 10px 20px #362E17;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3%;
 }
 
 .experience .CV .col2 {
@@ -274,6 +279,7 @@ input {
   padding-left: 12%;
   text-decoration: solid underline 2px #362E17;
   font-weight: bold;
+  margin-bottom: 1%;
 }
 
 .experience .CV .col2 .diplome {

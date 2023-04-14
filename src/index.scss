@@ -216,7 +216,7 @@ $fontsizelarge:3vw;
 
 .experience{
     p{
-        line-height: 3rem;
+        line-height: 4vw;
     }
     .date{
         background-color: #a08945;
@@ -235,6 +235,7 @@ $fontsizelarge:3vw;
         align-items: center;
         .metier{
             font-size: 3.5vw;
+            margin-bottom: 3%;
         }
         .name{
             display: flex;
@@ -243,6 +244,7 @@ $fontsizelarge:3vw;
             justify-content: center;
             width: 100%;
             font-size: 4vw;
+            margin-bottom: 3%;
             .photo{              
               @include standard-box($shadowColor);
                scale:0.75;
@@ -258,6 +260,9 @@ $fontsizelarge:3vw;
             font-weight: bold;
             font-size: 3vw;
             .certif{
+                height:6vw;
+                display: flex;
+                align-items: center;
                 font-size: 5vw;
                 padding: 0 5px;
                 background-color: #a08945;
@@ -266,7 +271,7 @@ $fontsizelarge:3vw;
                 border-bottom:2px solid  $shadowColor;
                 box-shadow: 8px 10px 20px  $shadowColor;    
                 margin-top: 2rem;
-                 margin-bottom:1rem;  
+                 margin-bottom: 3%; 
             }
         }
            
@@ -281,6 +286,7 @@ $fontsizelarge:3vw;
             text-align: left;           
     .underline-txt{
               @include underline-text($shadowColor);
+               margin-bottom:1%;
             }
    
     .diplome{
