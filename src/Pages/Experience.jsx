@@ -7,7 +7,17 @@ function Experience() {
   const [gestionnaire, setGestionnaire] = useState(false);
   const [formateur, setFormateur] = useState(false);
   const [conducteur, setConducteur] = useState(false);
+  const [diplome, setDiplome] = useState(false);
+  const [mention, setMention] = useState(false);
+  const [competence, setCompetence] = useState(false);
+  const [materiel, setMateriel] = useState(false);
+  const handleDiplome = () => {
+    setDiplome(!diplome);
+  };
 
+  const handleMention = () => {
+    setMention(!mention);
+  };
   const handleGestionnaire = () => {
     setGestionnaire(!gestionnaire);
   };
@@ -19,35 +29,150 @@ function Experience() {
   const handleConducteur = () => {
     setConducteur(!conducteur);
   };
+  const handleCompetence = () => {
+    setCompetence(!competence);
+  };
+  const handleMateriel=()=>{
+    setMateriel(!materiel)
+  }
 
   return (
     <div className="experience">
       <Navbar />
       <div className="CV">
         <div className="col1">
-          <h1 className="name"><img className='photo'src={Photo} />Mathieu Abruzzo</h1>
+          <h1 className="name">
+            <img className="photo" src={Photo} />
+            Mathieu Abruzzo
+          </h1>
           <h2 className="fonction">
             {" "}
-            <p>Enseignant de la conduite de la sécurité routière</p><p className="certif">certifié BEPCASER</p>
+            <p className="metier">Enseignant de la conduite de la sécurité routière</p>
+            <p className="certif">certifié BEPCASER</p>
           </h2>
         </div>
         <div className="col2">
-          col2
-          <div className="diplome">Diplomes et formations</div>
-          <div className="experrience">
-            experience
-            <p onClick={handleGestionnaire}>
-              gestionnaire de parc pour Forget formation
-            </p>
-            <div>
-              {gestionnaire && <p>le paragraphe gestionnaire de parc</p>}
+          <div className="diplome">
+            <p className="underline-txt">Diplomes et formations</p>
+            <div className="roll-group">
+              {" "}
+              <h2 className="roll" onClick={handleDiplome}>
+                BEPCASER
+              </h2>
+              <div>
+                {diplome && (
+                  <div>
+                    <p className="date">réalisé en 2016</p>
+                    <p className="centre">Etablissement: Geyser Rennes</p>
+                  </div>
+                )}
+              </div>
+              <h2 className="roll" onClick={handleMention}>
+                <p className="txt">Mention lourd</p>
+              </h2>
+              <div>
+                {mention && (
+                  <div>
+                    <p>2016</p>
+                    <p>ECF Landivisiau</p>
+                  </div>
+                )}
+              </div>
             </div>
-            <p onClick={handleFormateur}>Formateur Forget formation</p>
-            <div>{formateur && <p>le paragraphe formateur</p>}</div>
-            <p onClick={handleConducteur}>conducteur routier</p>
-            <div>{conducteur && <p>le paragraphe conducteur</p>}</div>
           </div>
-          <div className="competence">compétences</div>
+          <div className="experience-section">
+            <p className="underline-txt"> experience</p>
+            <div className="roll-group">
+              {" "}
+              <div className="roll" onClick={handleGestionnaire}>
+                <p className="txt">gestionnaire de parc</p>
+              </div>
+              <div>
+                {gestionnaire && (
+                  <div>
+                    <p className="date">Depuis 2016</p>
+                    <p className="centre">
+                      Forget formation Saint Jacques de la Lande
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className="roll" onClick={handleFormateur}>
+                <p className="txt">Formateur</p>{" "}
+              </div>
+              <div>
+                {formateur && (
+                  <div>
+                    <p className="date">depuis 2013</p>
+                    <p className="centre">
+                      Forget formations Saint Jacques de la Lande
+                    </p>
+                    <p className="fonction">Référent TP marchandises</p>
+                    <p className="fonction">Référent TP voyageurs</p>
+                    <p className="fonction">Référent FCO marchandises</p>
+                    <p className="fonction">Référent FCO voyageurs</p>
+                    <p className="fonction">Référent FIMO marchandises</p>
+                    <p className="fonction">Référent FIMO voyageurs</p>
+                    <p className="fonction">Référent permis sec</p>
+                    <p className="fonction">Conduite éco</p>
+                    <p className="fonction">Simulateur</p>
+                  </div>
+                )}
+              </div>
+              <div className="roll" onClick={handleConducteur}>
+                <p className="txt">conducteur routier</p>
+              </div>
+              <div>
+                {conducteur && (
+                  <div>
+                    <p className="date">De 2003 à 2013</p>{" "}
+                    <p className="centre">Diverses entreprises en Bretagne</p>{" "}
+                    <p className="fonction">
+                      Transport régional et international
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="competence">
+            {" "}
+            <p className="underline-txt"> compétences</p>
+            <div className="roll-group">
+              <div className="roll" onClick={handleCompetence}>
+                activité
+              </div>
+              <div>
+                {competence && (
+                  <div>
+                    <p >
+                      Préparer et animer des actions de formation collectives
+                    </p>
+                 
+                  </div>
+                  
+                )}
+              </div>
+               <div className="roll" onClick={handleMateriel}>
+                Matériels
+              </div>
+              <div>
+                {materiel && (
+                  <div>
+                   <p> Citerne liquide</p>
+                   <p>pulvérulent</p>
+                   <p>bâché</p>
+                   <p>camion remorque</p>
+                   <p>movi-bennes</p>
+                   <p>benne TP</p> 
+                   <p>céréalière</p>                
+                  </div>
+                  
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

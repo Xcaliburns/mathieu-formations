@@ -192,6 +192,17 @@ input {
 .experience {
   display: flex;
   flex-direction: column;
+  background-color: bisque;
+}
+
+.experience p {
+  line-height: 3rem;
+}
+
+.experience .date {
+  background-color: #a08945;
+  width: fit-content;
+  border-radius: 10px;
 }
 
 .experience .CV {
@@ -204,23 +215,28 @@ input {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  background-color: bisque;
+}
+
+.experience .CV .col1 .metier {
+  font-size: 3.5vw;
 }
 
 .experience .CV .col1 .name {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 5vw;
+  justify-content: center;
+  width: 100%;
+  font-size: 4vw;
 }
 
 .experience .CV .col1 .name .photo {
   border-right: 2px solid #362E17;
   border-bottom: 2px solid #362E17;
-  border-radius: 25px;
+  border-radius: 12px;
+  box-shadow: 8px 10px 20px #362E17;
   scale: 0.75;
   padding-right: 2%;
-  box-shadow: 8px 10px 20px #362E17;
 }
 
 .experience .CV .col1 .fonction {
@@ -233,16 +249,72 @@ input {
 }
 
 .experience .CV .col1 .fonction .certif {
-  padding: 0 2px;
+  font-size: 5vw;
+  padding: 0 5px;
+  background-color: #a08945;
   border-radius: 12px;
   border-right: 2px solid #362E17;
   border-bottom: 2px solid #362E17;
   box-shadow: 8px 10px 20px #362E17;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .experience .CV .col2 {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.experience .CV .col2 .underline-txt {
+  padding-left: 12%;
+  text-decoration: solid underline 2px #362E17;
+  font-weight: bold;
+}
+
+.experience .CV .col2 .diplome {
+  font-size: 3vw;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience .CV .col2 .roll-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.experience .CV .col2 .roll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #362E17;
+  border-bottom: 2px solid #362E17;
+  border-radius: 12px;
+  box-shadow: 8px 10px 20px #362E17;
+  background-color: #977254;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 40%;
+  height: 3rem;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+.experience .CV .col2 .experience-section {
+  margin-bottom: 5%;
+  font-size: 3vw;
+}
+
+.experience .CV .col2 .competence {
+  margin-bottom: 5%;
+  font-size: 3vw;
 }

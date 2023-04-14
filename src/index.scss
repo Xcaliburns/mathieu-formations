@@ -56,7 +56,21 @@ input{
 $navbarColor:#362E17;
 $primaryColor:#a08945;
 $shadowColor:#362E17;
+$fontsize:1vw;
+$fontsizelarge:3vw;
 
+//Mixins
+@mixin standard-box($shadowColor) {
+  border-right: 2px solid $shadowColor;
+  border-bottom: 2px solid $shadowColor;
+  border-radius: 12px;
+  box-shadow: 8px 10px 20px  $shadowColor;  
+}
+ @mixin underline-text($shadowColor){
+                padding-left: 12%;
+                 text-decoration: solid underline 2px $shadowColor;
+                 font-weight: bold;
+            }
 
 
 
@@ -194,44 +208,46 @@ $shadowColor:#362E17;
      .xp-pourcent{
         display: flex;
         justify-content: center;
-        align-items: center;
-      
-       
-       
+        align-items: center;       
      }
-
      }   
     }
 }
 
 .experience{
+    p{
+        line-height: 3rem;
+    }
+    .date{
+        background-color: #a08945;
+        width: fit-content;
+        border-radius: 10px;
+    }
     display:flex;
-    flex-direction: column;  
-    
-      
-    .CV{display: flex;
-        flex-direction: column;
-      
-       
+    flex-direction: column; 
+     background-color: bisque;
+     .CV{display: flex;
+        flex-direction: column;       
     .col1{
         display: flex;
         flex-direction: column;       
         width: 100%;
         align-items: center;
-        background-color: bisque;
+        .metier{
+            font-size: 3.5vw;
+        }
         .name{
             display: flex;
             flex-direction: row;
             align-items: center;
-            font-size: 5vw;
+            justify-content: center;
+            width: 100%;
+            font-size: 4vw;
             .photo{              
-               border-right: 2px solid  $shadowColor;              
-               border-bottom:  2px solid     $shadowColor;
-;
-               border-radius: 25px;
+              @include standard-box($shadowColor);
                scale:0.75;
                padding-right: 2%;  
-               box-shadow: 8px 10px 20px  $shadowColor;                   
+                             
             }
         }
         .fonction{
@@ -242,20 +258,68 @@ $shadowColor:#362E17;
             font-weight: bold;
             font-size: 3vw;
             .certif{
-                padding: 0 2px;
+                font-size: 5vw;
+                padding: 0 5px;
+                background-color: #a08945;
                 border-radius: 12px;
                 border-right: 2px solid  $shadowColor;
                 border-bottom:2px solid  $shadowColor;
-                box-shadow: 8px 10px 20px  $shadowColor;     
+                box-shadow: 8px 10px 20px  $shadowColor;    
+                margin-top: 2rem;
+                 margin-bottom:1rem;  
             }
         }
            
     }
     .col2{
-            align-items: center;
+            align-items: left;
+            display: flex;
+            flex-direction: column;   
+            justify-content: center;         
+            width:100%;
+            margin-top: 2rem;
+            text-align: left;           
+    .underline-txt{
+              @include underline-text($shadowColor);
+            }
+   
+    .diplome{
+       font-size: $fontsizelarge;      
+       margin-bottom: 5%;
+       display: flex;          
+       flex-direction: column;
+       justify-content: center;
+    }
+     .roll-group{
             display: flex;
             flex-direction: column;
-            
-            width:100%;
-    }}
-}
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+           
+        }    
+     .roll{              
+            display: flex;
+            align-items: center;
+           justify-content: center;
+            @include standard-box($shadowColor);
+            background-color: rgb(151, 114, 84);
+            margin-top:1rem;
+            margin-bottom: 1rem;            
+            width: 40%;
+            height: 3rem;
+            font-size: 3vw;
+            cursor:pointer;
+          
+      }
+    .experience-section{
+                 margin-bottom: 5%;   
+                 font-size: 3vw;
+    }
+    .competence{
+                margin-bottom: 5%;
+                 font-size: 3vw;
+                 
+         }
+    }
+} }
