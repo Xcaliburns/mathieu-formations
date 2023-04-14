@@ -55,6 +55,9 @@ input {
   width: 100%;
   height: 17%;
   background-color: #362E17;
+  border-bottom: 3px solid #a08945;
+  box-shadow: 0px 20px 18px #a08945;
+  border-radius: 0px 0px 12px 12px;
 }
 
 .Header .navbar-logo {
@@ -72,7 +75,6 @@ input {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 5%;
 }
 
 .Header .Navbar .nav-link {
@@ -190,6 +192,17 @@ input {
 .experience {
   display: flex;
   flex-direction: column;
+  background-color: bisque;
+}
+
+.experience p {
+  line-height: 4vw;
+}
+
+.experience .date {
+  background-color: #a08945;
+  width: fit-content;
+  border-radius: 10px;
 }
 
 .experience .CV {
@@ -200,15 +213,114 @@ input {
 .experience .CV .col1 {
   display: flex;
   flex-direction: column;
-  background-color: red;
   width: 100%;
   align-items: center;
 }
 
-.experience .CV .col2 {
+.experience .CV .col1 .metier {
+  font-size: 3.5vw;
+  margin-bottom: 3%;
+}
+
+.experience .CV .col1 .name {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 4vw;
+  margin-bottom: 3%;
+}
+
+.experience .CV .col1 .name .photo {
+  border-right: 2px solid #362E17;
+  border-bottom: 2px solid #362E17;
+  border-radius: 12px;
+  box-shadow: 8px 10px 20px #362E17;
+  scale: 0.75;
+  padding-right: 2%;
+}
+
+.experience .CV .col1 .fonction {
   display: flex;
   flex-direction: column;
-  background-color: green;
+  align-items: center;
+  line-height: 6vw;
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+.experience .CV .col1 .fonction .certif {
+  height: 6vw;
+  display: flex;
+  align-items: center;
+  font-size: 5vw;
+  padding: 0 5px;
+  background-color: #a08945;
+  border-radius: 12px;
+  border-right: 2px solid #362E17;
+  border-bottom: 2px solid #362E17;
+  box-shadow: 8px 10px 20px #362E17;
+  margin-top: 2rem;
+  margin-bottom: 3%;
+}
+
+.experience .CV .col2 {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.experience .CV .col2 .underline-txt {
+  padding-left: 12%;
+  text-decoration: solid underline 2px #362E17;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.experience .CV .col2 .diplome {
+  font-size: 3vw;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience .CV .col2 .roll-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.experience .CV .col2 .roll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #362E17;
+  border-bottom: 2px solid #362E17;
+  border-radius: 12px;
+  box-shadow: 8px 10px 20px #362E17;
+  background-color: #977254;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 40%;
+  height: 3rem;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+.experience .CV .col2 .experience-section {
+  margin-bottom: 5%;
+  font-size: 3vw;
+}
+
+.experience .CV .col2 .competence {
+  margin-bottom: 5%;
+  font-size: 3vw;
 }
