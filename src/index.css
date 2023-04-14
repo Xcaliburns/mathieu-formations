@@ -55,6 +55,9 @@ input {
   width: 100%;
   height: 17%;
   background-color: #362E17;
+  border-bottom: 3px solid #a08945;
+  box-shadow: 0px 20px 18px #a08945;
+  border-radius: 0px 0px 12px 12px;
 }
 
 .Header .navbar-logo {
@@ -72,7 +75,6 @@ input {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 5%;
 }
 
 .Header .Navbar .nav-link {
@@ -200,15 +202,47 @@ input {
 .experience .CV .col1 {
   display: flex;
   flex-direction: column;
-  background-color: red;
   width: 100%;
   align-items: center;
+  background-color: bisque;
+}
+
+.experience .CV .col1 .name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 5vw;
+}
+
+.experience .CV .col1 .name .photo {
+  border-right: 2px solid #362E17;
+  border-bottom: 2px solid #362E17;
+  border-radius: 25px;
+  scale: 0.75;
+  padding-right: 2%;
+  box-shadow: 8px 10px 20px #362E17;
+}
+
+.experience .CV .col1 .fonction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 6vw;
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+.experience .CV .col1 .fonction .certif {
+  padding: 0 2px;
+  border-radius: 12px;
+  border-right: 2px solid #362E17;
+  border-bottom: 2px solid #362E17;
+  box-shadow: 8px 10px 20px #362E17;
 }
 
 .experience .CV .col2 {
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: green;
   width: 100%;
 }
