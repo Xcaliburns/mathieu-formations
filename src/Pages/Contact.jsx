@@ -1,36 +1,33 @@
 import React, { useRef } from "react";
 import Navbar from "../Components/Navbar";
 import emailjs from "@emailjs/browser";
-
+import { useNavigate } from "react-router-dom";
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
 function Contact() {
   const form = useRef();
-
+  const navigate = useNavigate();
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
-        
         console.log(result.text);
         console.log("message envoyé");
+        navigate("/sent");
       },
       (error) => {
         console.log(error.text);
       }
     );
   };
-console.log(typeof(publicKey));
-console.log(templateId);
-console.log(serviceId);
+
   return (
     <div>
       <Navbar />{" "}
       <div className="contact">
-       
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
           <input type="text" name="user_name" />
