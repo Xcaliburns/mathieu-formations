@@ -2,9 +2,10 @@ import React, { useRef } from "react";
 import Navbar from "../Components/Navbar";
 import emailjs from "@emailjs/browser";
 
-const serviceId = import.meta.env.SERVICE_ID;
-const templateId = import.meta.env.TEMPLATE_ID;
-const publicKey = import.meta.env.PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const templateId = import.meta.env.VITE_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
 function Contact() {
   const form = useRef();
 
