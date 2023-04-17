@@ -23,9 +23,7 @@ function Contact() {
       }
     );
   };
-console.log(typeof(publicKey));
-console.log(templateId);
-console.log(serviceId);
+
   return (
     <div>
       <Navbar />{" "}
