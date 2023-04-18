@@ -15,14 +15,14 @@ function Accueil() {
         <h2 className="slogan-type">CONDUITE ECO POIDS LOURDS</h2>
         </div>
        
-         <div className="free">
-          La formation poids lourd qui vous mène loin.
+         <div><div className="free">
+          Le couteau suisse pour votre centre de formation
          </div>
           </div>
         <div className="reussite">           
             <div className="xp-texte">Réussite<div className="xp-pourcent">100%</div></div> 
 
-        </div>
+        </div></div>
         
       </div>
     </div>

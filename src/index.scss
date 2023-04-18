@@ -59,10 +59,19 @@ $shadowColor:#362E17;
 $fontsize:1vw;
 $fontsizelarge:3vw;
 
+
+// Variables de couleurs pour le formulaire
+$main-color: #0080FF;
+$light-main-color: #66B2FF;
+$secondary-color: #444444;
+$light-color: #c6cdd5;
+$dark-color: #666666;
+$roll-color:#f0f2f6;
+
 //Mixins
-@mixin standard-box($shadowColor) {
-  border-right: 2px solid $shadowColor;
-  border-bottom: 2px solid $shadowColor;
+@mixin standard-box($secondary-color) {
+  border: 2px solid $secondary-color;
+
   border-radius: 12px;
   box-shadow: 8px 10px 20px  $shadowColor;  
 }
@@ -70,36 +79,35 @@ $fontsizelarge:3vw;
                 padding-left: 12%;
                  text-decoration: solid underline 2px $shadowColor;
                  font-weight: bold;
+                 font-size: 1.2rem;
             }
 
 
 
 .Header{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;    
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    padding:1rem;
+    padding: 2rem;
     width: 100%;  
-
-    height: 100px;
+   
     
-    background-color: $navbarColor;
-    border-bottom:3px solid $primaryColor;
-    box-shadow: 0px 20px 18px #a08945;
+    background-color: $secondary-color;
+    border-bottom:3px solid $dark-color;
+    box-shadow: 0px 20px 18px $dark-color;
     border-radius: 0px 0px 12px 12px;
-   .navbar-logo{
-        font-size: 3rem;
-        color:white;
-        margin-bottom: 2rem;
-        margin-left: 3rem;
-        margin-top: 2rem;
-        width:15%;
-    }
+//    .navbar-logo{
+//         font-size: 3rem;
+//         color:white;
+//         margin-bottom: 2rem;
+//         margin-left: 3rem;
+//         margin-top: 2rem;
+//         width:15%;
+//     }
     .Navbar{
      
-        width:80%;
+        width:100%;
         display: flex;
         align-items: center;
         flex-direction: row;       
@@ -109,7 +117,7 @@ $fontsizelarge:3vw;
          
        
     .nav-link {       
-        padding:  0 0.3rem; 
+        // padding:  0 0.3rem; 
         color:inherit;
         text-decoration: none;
         color: whitesmoke;  
@@ -122,7 +130,7 @@ $fontsizelarge:3vw;
     display: flex;
     flex-direction: column;  
     justify-content: center; 
-    height:100vh;
+    height:100%;
     width: 100%;
     overflow-x: hidden;
     .background-section{
@@ -139,9 +147,8 @@ $fontsizelarge:3vw;
     flex-direction: column;
     height:40%;
    
-    .photo{   
-            
-        background-color: transparent;
+    .photo{              
+        
         border-radius: 40%;
         scale:(0.5);
         height: fit-content;
@@ -150,7 +157,7 @@ $fontsizelarge:3vw;
     }
     .slogan-texte{
         width:100%;
-       margin-top: 5%;;
+      
     .slogan-titre{
     text-transform: capitalize;
     display: inline-block;
@@ -218,17 +225,22 @@ $fontsizelarge:3vw;
 }
 
 .experience{
-    p{
-        line-height: 4vw;
-    }
-    .date{
-        background-color: #a08945;
-        width: fit-content;
-        border-radius: 10px;
-    }
     display:flex;
     flex-direction: column; 
-     background-color: bisque;
+     background-color: $light-color;
+    .date{
+       padding-bottom: 10px;       
+    }
+     .centre{
+            display: flex;
+            padding-bottom: 7px;
+        }
+        .fonction{           
+            font-size: 1rem;
+            padding-bottom: 3px;
+            
+        }  
+   
      .CV{display: flex;
         flex-direction: column;       
     .col1{
@@ -237,7 +249,7 @@ $fontsizelarge:3vw;
         width: 100%;
         align-items: center;
         .metier{
-            font-size: 3.5vw;
+            font-size: 0.9rem;
             margin-bottom: 3%;
         }
         .name{
@@ -246,37 +258,36 @@ $fontsizelarge:3vw;
             align-items: center;
             justify-content: center;
             width: 100%;
-            font-size: 4vw;
+            font-size: 1.5rem;            
             margin-bottom: 3%;
             .photo{              
               @include standard-box($shadowColor);
                scale:0.75;
-               padding-right: 2%;  
+               padding-left: 2%;  
                              
             }
         }
-        .fonction{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            line-height: 6vw;
-            font-weight: bold;
-            font-size: 3vw;
+       
+      
             .certif{
                 height:6vw;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 font-size: 5vw;
                 padding: 0 5px;
-                background-color: #a08945;
+                background-color: $dark-color;
                 border-radius: 12px;
                 border-right: 2px solid  $shadowColor;
                 border-bottom:2px solid  $shadowColor;
                 box-shadow: 8px 10px 20px  $shadowColor;    
                 margin-top: 2rem;
-                 margin-bottom: 3%; 
+                margin-bottom: 3%; 
+                height: fit-content;
+                padding: 8px;
+                color:$roll-color;
             }
-        }
+        
            
     }
     .col2{
@@ -311,15 +322,32 @@ $fontsizelarge:3vw;
             display: flex;
             align-items: center;
            justify-content: center;
-            @include standard-box($shadowColor);
-            background-color: rgb(151, 114, 84);
+            @include standard-box($light-color);
+            border-color: $secondary-color;
             margin-top:1rem;
             margin-bottom: 1rem;            
-            width: 40%;
+            width: 50%;
             height: 3rem;
-            font-size: 3vw;
+            font-size: 1rem;
+            background-color: $roll-color;
             cursor:pointer;
+           
           
+      }
+       .roll:hover, .roll:focus{
+  border-color: $main-color;
+ box-shadow:0 0 50px 3px  $main-color;  
+}
+      .unroll{
+        display: block;
+        border:1px solid $dark-color;
+        border-radius: 5px;
+        font-size: 1rem;
+        padding:3px;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        
       }
     .experience-section{
                  margin-bottom: 5%;   
@@ -333,34 +361,78 @@ $fontsizelarge:3vw;
     }
 } }
 
-.contact{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        input{
-            font-size: 2vw;;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-            border-radius: 12px;
-            height:40px;
-            width:300px;            
-        }
-        textarea{
-            text-align: left;
-            width:300px;
-            height:150px;
+// .contact{
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     form{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         input{
+//             font-size: 2vw;;
+//             margin-top: 10px;
+//             margin-bottom: 10px;
+//             text-align: center;
+//             border-radius: 12px;
+//             height:40px;
+//             width:300px;            
+//         }
+//         textarea{
+//             text-align: left;
+//             width:300px;
+//             height:150px;
 
-        }
-        label{
-            font-size: 1.7vw;
-        }
-    }
+//         }
+//         label{
+//             font-size: 1.7vw;
+//         }
+//     }
+// }
+
+// Style de base pour les labels
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: $secondary-color;
+}
+
+// Style de base pour les inputs et les textarea
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $secondary-color;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+// Style pour les inputs en état :hover et :focus
+input:hover, input:focus, textarea:hover, textarea:focus {
+  border-color: $main-color;
+}
+
+// Style pour le bouton Envoyer
+button {
+  background-color: $main-color;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+// Style pour le formulaire complet
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: $light-color;
+  border-radius: 0.25rem;
 }
