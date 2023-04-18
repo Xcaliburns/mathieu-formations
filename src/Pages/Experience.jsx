@@ -53,7 +53,7 @@ function Experience() {
         </div>
         <div className="col2">
           <div className="diplome">
-            <p className="underline-txt">Diplomes et formations</p>
+            <p className="underline-txt">Diplomes et Formations</p>
             <div className="roll-group">
               {" "}
               <h2 className="roll" onClick={handleDiplome}>
@@ -61,7 +61,7 @@ function Experience() {
               </h2>
               <div>
                 {diplome && (
-                  <div>
+                  <div className="unroll">
                     <p className="date">réalisé en 2016</p>
                     <p className="centre">Etablissement: Geyser Rennes</p>
                   </div>
@@ -72,7 +72,7 @@ function Experience() {
               </h2>
               <div>
                 {mention && (
-                  <div>
+                  <div className="unroll">
                     <p>2016</p>
                     <p>ECF Landivisiau</p>
                   </div>
@@ -81,7 +81,7 @@ function Experience() {
             </div>
           </div>
           <div className="experience-section">
-            <p className="underline-txt"> experience</p>
+            <p className="underline-txt"> Expérience</p>
             <div className="roll-group">
               {" "}
               <div className="roll" onClick={handleGestionnaire}>
@@ -89,7 +89,7 @@ function Experience() {
               </div>
               <div>
                 {gestionnaire && (
-                  <div>
+                  <div className="unroll">
                     <p className="date">Depuis 2016</p>
                     <p className="centre">
                       Forget formation Saint Jacques de la Lande
@@ -102,7 +102,7 @@ function Experience() {
               </div>
               <div>
                 {formateur && (
-                  <div>
+                  <div className="unroll">
                     <p className="date">depuis 2013</p>
                     <p className="centre">
                       Forget formations Saint Jacques de la Lande
@@ -124,7 +124,7 @@ function Experience() {
               </div>
               <div>
                 {conducteur && (
-                  <div>
+                  <div className="unroll"> 
                     <p className="date">De 2003 à 2013</p>{" "}
                     <p className="centre">Diverses entreprises en Bretagne</p>{" "}
                     <p className="fonction">
@@ -138,15 +138,15 @@ function Experience() {
 
           <div className="competence">
             {" "}
-            <p className="underline-txt"> compétences</p>
+            <p className="underline-txt"> Compétences</p>
             <div className="roll-group">
               <div className="roll" onClick={handleCompetence}>
                 activité
               </div>
               <div>
                 {competence && (
-                  <div>
-                    <p >
+                  <div className="unroll"> 
+                    <p className="fonction">
                       Préparer et animer des actions de formation collectives
                     </p>
                  
@@ -159,7 +159,7 @@ function Experience() {
               </div>
               <div>
                 {materiel && (
-                  <div>
+                  <div className="unroll">
                    <p> Citerne liquide</p>
                    <p>pulvérulent</p>
                    <p>bâché</p>
