@@ -1,15 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300");
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,18 +72,23 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -95,7 +152,7 @@ input {
 .Accueil .background-section .slogan {
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 40vh;
 }
 
 .Accueil .background-section .slogan .photo {
@@ -106,7 +163,10 @@ input {
 }
 
 .Accueil .background-section .slogan .slogan-texte {
-  width: 100%;
+  width: 90%;
+  height: 50%;
+  padding-bottom: 10vh;
+  padding-left: 5vh;
 }
 
 .Accueil .background-section .slogan .slogan-texte .slogan-titre {
@@ -116,15 +176,14 @@ input {
   align-items: center;
   background-color: transparent;
   width: fit-content;
-  margin-left: 5%;
   color: black;
-  font-size: 5vW;
+  font-size: 7vw;
   text-decoration-line: overline underline;
   text-decoration-color: black;
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: auto;
   line-height: 1.5;
-  margin-top: 8%;
+  padding-top: 5vh;
   margin-bottom: 1vw;
 }
 
@@ -132,29 +191,73 @@ input {
   color: black;
   font-size: 3vw;
   text-align: start;
-  margin-left: 5%;
 }
 
-.Accueil .background-section .free {
+.Accueil .background-section .accroche {
+  padding-left: 5vh;
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Accueil .background-section .accroche .free1 {
   font-weight: bolder;
-  font-size: 3vw;
+  font-size: 3vh;
+  text-align: left;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 5%;
-  margin: auto;
-  margin-top: 10%;
+  justify-content: left;
+  height: 5vh;
 }
 
-.Accueil .background-section .reussite {
-  margin-top: 3%;
+.Accueil .background-section .accroche .free2 {
+  font-weight: bolder;
+  font-size: 2.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 5vh;
+  padding-left: 1rem;
+}
+
+.Accueil .background-section .free3 {
+  width: 80%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bolder;
+  font-size: 2vh;
+  height: 5vh;
+  padding-left: 5vh;
+}
+
+.Accueil .background-section .badges {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10%;
+}
+
+.Accueil .background-section .badges .badge-bpcaser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f2f6;
+  font-size: 2rem;
+  background-color: #666666;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.Accueil .background-section .badges .reussite {
   display: flex;
   justify-content: flex-end;
   font-size: 2rem;
   margin-right: 3%;
 }
 
-.Accueil .background-section .reussite .xp-texte {
+.Accueil .background-section .badges .reussite .xp-texte {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,14 +265,13 @@ input {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  background-color: #362E17;
-  margin-right: 2rem;
-  margin-top: 10%;
+  background-color: #666666;
+  margin-right: 5%;
   color: aliceblue;
   line-height: 40px;
 }
 
-.Accueil .background-section .reussite .xp-pourcent {
+.Accueil .background-section .badges .reussite .xp-pourcent {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,9 +325,9 @@ input {
 }
 
 .experience .CV .col1 .name .photo {
-  border: 2px solid #362E17;
+  border: 2px solid #362e17;
   border-radius: 12px;
-  box-shadow: 8px 10px 20px #362E17;
+  box-shadow: 8px 10px 20px #362e17;
   scale: 0.75;
   padding-left: 2%;
 }
@@ -239,9 +341,9 @@ input {
   padding: 0 5px;
   background-color: #666666;
   border-radius: 12px;
-  border-right: 2px solid #362E17;
-  border-bottom: 2px solid #362E17;
-  box-shadow: 8px 10px 20px #362E17;
+  border-right: 2px solid #362e17;
+  border-bottom: 2px solid #362e17;
+  box-shadow: 8px 10px 20px #362e17;
   margin-top: 2rem;
   margin-bottom: 3%;
   height: fit-content;
@@ -261,7 +363,7 @@ input {
 
 .experience .CV .col2 .underline-txt {
   padding-left: 12%;
-  text-decoration: solid underline 2px #362E17;
+  text-decoration: solid underline 2px #362e17;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 1%;
@@ -289,7 +391,7 @@ input {
   justify-content: center;
   border: 2px solid #c6cdd5;
   border-radius: 12px;
-  box-shadow: 8px 10px 20px #362E17;
+  box-shadow: 8px 10px 20px #362e17;
   border-color: #444444;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -300,9 +402,10 @@ input {
   cursor: pointer;
 }
 
-.experience .CV .col2 .roll:hover, .experience .CV .col2 .roll:focus {
-  border-color: #0080FF;
-  box-shadow: 0 0 50px 3px #0080FF;
+.experience .CV .col2 .roll:hover,
+.experience .CV .col2 .roll:focus {
+  border-color: #0080ff;
+  box-shadow: 0 0 50px 3px #0080ff;
 }
 
 .experience .CV .col2 .unroll {
@@ -333,7 +436,8 @@ label {
   color: #444444;
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   width: 100%;
   padding: 0.5rem;
@@ -343,13 +447,16 @@ input, textarea {
   margin-bottom: 1rem;
 }
 
-input:hover, input:focus, textarea:hover, textarea:focus {
-  border-color: #0080FF;
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  border-color: #0080ff;
 }
 
 button {
-  background-color: #0080FF;
-  color: #FFFFFF;
+  background-color: #0080ff;
+  color: #ffffff;
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
