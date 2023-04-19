@@ -7,14 +7,16 @@ import Gallery from "./Pages/Gallery";
 import Sent from "./Pages/MessageSent";
 
 function App() {
+  console.log(typeof JSON.stringify(localStorage.getItem("validate")));
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sent" element={<Sent />} />
+
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );

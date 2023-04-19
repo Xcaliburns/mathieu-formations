@@ -2,6 +2,10 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Photo from "../assets/photoMathieu.png"
 function Accueil() {
+        // localStorage.setItem("validate",true);
+        // localStorage.setItem("validate",false);
+  console.log(localStorage.getItem('validate'));
+  
   return (
     <div className="Accueil">
       <Navbar />
