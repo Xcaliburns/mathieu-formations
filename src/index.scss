@@ -1,397 +1,458 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300");
 
-*, *:before, *:after{
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    font-family: 'Poppins', sans-serif;
-    vertical-align: baseline;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    text-size-adjust: none;
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Poppins", sans-serif;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
 }
 
 // footer, header, nav, section, main{
 //     display: block;
 // }
 
-body{
-    line-height: 1;
+body {
+  line-height: 1;
+  height: 100vh;
 }
 
-ol, ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-blockquote, q{
-    quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after{
-    content: '';
-    content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-input{
-    -webkit-appearance: none;
-    border-radius: 0;
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
-
 
 // variables
 
-$navbarColor:#362E17;
-$primaryColor:#a08945;
-$shadowColor:#362E17;
-$fontsize:1vw;
-$fontsizelarge:3vw;
-
+$navbarColor: #362e17;
+$primaryColor: #a08945;
+$shadowColor: #362e17;
+$fontsize: 1vw;
+$fontsizelarge: 3vw;
 
 // Variables de couleurs pour le formulaire
-$main-color: #0080FF;
-$light-main-color: #66B2FF;
+$main-color: #0080ff;
+$light-main-color: #66b2ff;
 $secondary-color: #444444;
 $light-color: #c6cdd5;
 $dark-color: #666666;
-$roll-color:#f0f2f6;
+$roll-color: #f0f2f6;
 
 //Mixins
 @mixin standard-box($secondary-color) {
   border: 2px solid $secondary-color;
 
   border-radius: 12px;
-  box-shadow: 8px 10px 20px  $shadowColor;  
+  box-shadow: 8px 10px 20px $shadowColor;
 }
- @mixin underline-text($shadowColor){
-                padding-left: 12%;
-                 text-decoration: solid underline 2px $shadowColor;
-                 font-weight: bold;
-                 font-size: 1.2rem;
-            }
-
-
-
-.Header{
-    display: flex;    
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 2rem;
-    width: 100%;  
-   
-    
-    background-color: $secondary-color;
-    border-bottom:3px solid $dark-color;
-    box-shadow: 0px 20px 18px $dark-color;
-    border-radius: 0px 0px 12px 12px;
-//    .navbar-logo{
-//         font-size: 3rem;
-//         color:white;
-//         margin-bottom: 2rem;
-//         margin-left: 3rem;
-//         margin-top: 2rem;
-//         width:15%;
-//     }
-    .Navbar{
-     
-        width:100%;
-        display: flex;
-        align-items: center;
-        flex-direction: row;       
-        justify-content: space-around;
-       
-       
-         
-       
-    .nav-link {       
-        // padding:  0 0.3rem; 
-        color:inherit;
-        text-decoration: none;
-        color: whitesmoke;  
-}
-    }
- 
+@mixin underline-text($shadowColor) {
+  padding-left: 12%;
+  text-decoration: solid underline 2px $shadowColor;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.Accueil{
-    display: flex;
-    flex-direction: column;  
-    justify-content: center; 
-    height:100%;
-    width: 100%;
-    overflow-x: hidden;
-    .background-section{
-    width: 100%;
-  height: 100vh;
-  background-image: url("https://cdn.pixabay.com/photo/2014/01/04/12/34/road-238458_960_720.jpg");
-  background-size: cover;
-  background-position-x: 45%;
-  background-position-y: center;
-  position: relative;
-  box-sizing: border-box;
-   .slogan{
-    display: flex;
-    flex-direction: column;
-    height:40%;
-   
-    .photo{              
+.Header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
+  width: 100%;
+
+  background-color: $secondary-color;
+  border-bottom: 3px solid $dark-color;
+  box-shadow: 0px 20px 18px $dark-color;
+  border-radius: 0px 0px 12px 12px;
+     .navbar-logo{
+      display:flex;   
         
+         
+      }
+  .Navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .nav-link {
+      // padding:  0 0.3rem;
+      color: inherit;
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  }
+}
+
+.Accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .background-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2014/01/04/12/34/road-238458_960_720.jpg");
+    background-size: cover;
+    background-position-x: 45%;
+    background-position-y: center;
+    position: relative;
+    box-sizing: border-box;
+    .slogan {
+      display: flex;
+      flex-direction: column;
+      height: 40vh;
+
+      .photo {
         border-radius: 40%;
-        scale:(0.5);
+        scale: (0.5);
         height: fit-content;
         width: fit-content;
-        
-    }
-    .slogan-texte{
-        width:100%;
-      
-    .slogan-titre{
-    text-transform: capitalize;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width: fit-content;
-    margin-left: 5%;
-    color:black;
-    font-size:5vW;
-        text-decoration-line: overline underline;
-        text-decoration-color: black;
-        text-decoration-thickness: 3px;
-       text-decoration-skip-ink:auto ;
-       line-height: 1.5;
-        margin-top: 8%;
-        margin-bottom: 1vw;
-        }
-        .slogan-type{
-            color:black;
-            font-size: 3vw;
-           text-align:start;
-            margin-left: 5%;
-        }}}
-           .free{
-            font-weight: bolder;
-            font-size: 3vw;
-            display: flex;                
-            align-items: center;
-            justify-content: center;          
-            height: 5%;           
-            margin: auto;
-            margin-top:10%;
-           
-           
-        }
-     .reussite{
-        margin-top: 3%;
-        display: flex;
-        justify-content: flex-end;
-        font-size:2rem;
-        margin-right: 3% ;
+      }
+      .slogan-texte {
+        width: 90%;
+        height: 50%;
+        padding-bottom: 10vh;
+        padding-left: 5vh;
 
-        .xp-texte{
-            display: flex;
-              flex-direction: column;
-            align-items: center;
-            justify-content: center;
-             width:10rem;
-        height:10rem;
-        border-radius: 50%;
-          background-color: $shadowColor;
-            margin-right: 2rem;
-            margin-top: 10%;
-             color: aliceblue;
-             line-height: 40px;
+        .slogan-titre {
+          text-transform: capitalize;
+          display: inline-block;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          width: fit-content;
+          color: black;
+          font-size: 7vw;
+          text-decoration-line: overline underline;
+          text-decoration-color: black;
+          text-decoration-thickness: 3px;
+          text-decoration-skip-ink: auto;
+          line-height: 1.5;
+          padding-top: 5vh;
+          margin-bottom: 1vw;
         }
-     .xp-pourcent{
+        .slogan-type {
+          color: black;
+          font-size: 3vw;
+          text-align: start;
+        }
+      }
+    }
+
+    .accroche{
+        padding-left: 5vh;
+       margin-top:10%;
+        display: flex;
+        flex-wrap: wrap;
+       
+    .free1 {
+      font-weight: bolder;
+      font-size:32px;
+     text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      height: 5vh;
+     
+    }
+     .free2 {
+      font-weight: bolder;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      height: 5vh;
+      line-height: 32px;
+      margin-bottom: 2%;
+      
+    }
+    
+    }
+     .free3 {
+        width: 90%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-start;
+      font-weight: bolder;
+      font-size: 16px;     
+      height: 5vh;
+      padding-left: 5vh;
+      margin-bottom: 15%;
+      
+      line-height: 32px;
+      
+
+    }
+    .badges{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10%;
+        margin-top: 10vh;
+       
+        
+
+    .badge-bpcaser{
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+        color:#f0f2f6;
+        font-size: 2rem;
+          background-color: $dark-color;
+           width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        
+    }    
+    .reussite {
+     
+      display: flex;
+      justify-content: flex-end;
+      font-size: 2rem;
+      margin-right: 3%;
+
+      .xp-texte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background-color: $dark-color;
+        margin-right: 5%;
+        color: aliceblue;
+        line-height: 40px;
+      }
+      .xp-pourcent {
         display: flex;
         justify-content: center;
-        align-items: center;       
-     }
-     }   
-    }
+        align-items: center;
+      }
+    }}
+  }
 }
 
-.experience{
-    display:flex;
-    flex-direction: column; 
-     background-color: $light-color;
-    .date{
-       padding-bottom: 10px;       
-    }
-     .centre{
-            display: flex;
-            padding-bottom: 7px;
-        }
-        .fonction{           
-            font-size: 1rem;
-            padding-bottom: 3px;
-            
-        }  
-   
-     .CV{display: flex;
-        flex-direction: column;       
-    .col1{
-        display: flex;
-        flex-direction: column;       
-        width: 100%;
-        align-items: center;
-        .metier{
-            font-size: 0.9rem;
-            margin-bottom: 3%;
-        }
-        .name{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            font-size: 1.5rem;            
-            margin-bottom: 3%;
-            .photo{              
-              @include standard-box($shadowColor);
-               scale:0.75;
-               padding-left: 2%;  
-                             
-            }
-        }
-       
-      
-            .certif{
-                height:6vw;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 5vw;
-                padding: 0 5px;
-                background-color: $dark-color;
-                border-radius: 12px;
-                border-right: 2px solid  $shadowColor;
-                border-bottom:2px solid  $shadowColor;
-                box-shadow: 8px 10px 20px  $shadowColor;    
-                margin-top: 2rem;
-                margin-bottom: 3%; 
-                height: fit-content;
-                padding: 8px;
-                color:$roll-color;
-            }
-        
-           
-    }
-    .col2{
-            align-items: left;
-            display: flex;
-            flex-direction: column;   
-            justify-content: center;         
-            width:100%;
-            margin-top: 2rem;
-            text-align: left;           
-    .underline-txt{
-              @include underline-text($shadowColor);
-               margin-bottom:1%;
-            }
-   
-    .diplome{
-       font-size: $fontsizelarge;      
-       margin-bottom: 5%;
-       display: flex;          
-       flex-direction: column;
-       justify-content: center;
-    }
-     .roll-group{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 25px;
-           
-        }    
-     .roll{              
-            display: flex;
-            align-items: center;
-           justify-content: center;
-            @include standard-box($light-color);
-            border-color: $secondary-color;
-            margin-top:1rem;
-            margin-bottom: 1rem;            
-            width: 50%;
-            height: 3rem;
-            font-size: 1rem;
-            background-color: $roll-color;
-            cursor:pointer;
-           
-          
+.experience {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-color;
+  .date {
+    padding-bottom: 10px;
+  }
+  .centre {
+    display: flex;
+    padding-bottom: 7px;
+  }
+  .fonction {
+    font-size: 1rem;
+    padding-bottom: 3px;
+  }
+
+  .CV {
+    display: flex;
+    flex-direction: column;
+    .col1 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      .metier {
+        font-size: 0.9rem;
+        margin-bottom: 3%;
       }
-       .roll:hover, .roll:focus{
-  border-color: $main-color;
- box-shadow:0 0 50px 3px  $main-color;  
-}
-      .unroll{
+      .name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-bottom: 3%;
+        .photo {
+          @include standard-box($shadowColor);
+          scale: 0.75;
+          padding-left: 2%;
+        }
+      }
+
+      .certif {
+        height: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5vw;
+        padding: 0 5px;
+        background-color: $dark-color;
+        border-radius: 12px;
+        border-right: 2px solid $shadowColor;
+        border-bottom: 2px solid $shadowColor;
+        box-shadow: 8px 10px 20px $shadowColor;
+        margin-top: 2rem;
+        margin-bottom: 3%;
+        height: fit-content;
+        padding: 8px;
+        color: $roll-color;
+      }
+    }
+    .col2 {
+      align-items: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2rem;
+      text-align: left;
+      .underline-txt {
+        @include underline-text($shadowColor);
+        margin-bottom: 1%;
+      }
+
+      .diplome {
+        font-size: $fontsizelarge;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .roll-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+      }
+      .roll {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include standard-box($light-color);
+        border-color: $secondary-color;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 50%;
+        height: 3rem;
+        font-size: 1rem;
+        background-color: $roll-color;
+        cursor: pointer;
+      }
+      .roll:hover,
+      .roll:focus {
+        border-color: $main-color;
+        box-shadow: 0 0 50px 3px $main-color;
+      }
+      .unroll {
         display: block;
-        border:1px solid $dark-color;
+        border: 1px solid $dark-color;
         border-radius: 5px;
         font-size: 1rem;
-        padding:3px;
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-        
+        padding: 3px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
       }
-    .experience-section{
-                 margin-bottom: 5%;   
-                 font-size: 3vw;
+      .experience-section {
+        margin-bottom: 5%;
+        font-size: 3vw;
+      }
+      .competence {
+        margin-bottom: 5%;
+        font-size: 3vw;
+      }
     }
-    .competence{
-                margin-bottom: 5%;
-                 font-size: 3vw;
-                 
-         }
-    }
-} }
-
-// .contact{
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     form{
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         input{
-//             font-size: 2vw;;
-//             margin-top: 10px;
-//             margin-bottom: 10px;
-//             text-align: center;
-//             border-radius: 12px;
-//             height:40px;
-//             width:300px;            
-//         }
-//         textarea{
-//             text-align: left;
-//             width:300px;
-//             height:150px;
-
-//         }
-//         label{
-//             font-size: 1.7vw;
-//         }
-//     }
-// }
+  }
+}
 
 // Style de base pour les labels
 label {
@@ -402,7 +463,8 @@ label {
 }
 
 // Style de base pour les inputs et les textarea
-input, textarea {
+input,
+textarea {
   display: block;
   width: 100%;
   padding: 0.5rem;
@@ -413,14 +475,17 @@ input, textarea {
 }
 
 // Style pour les inputs en état :hover et :focus
-input:hover, input:focus, textarea:hover, textarea:focus {
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
   border-color: $main-color;
 }
 
 // Style pour le bouton Envoyer
 button {
   background-color: $main-color;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
