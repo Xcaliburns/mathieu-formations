@@ -480,4 +480,9 @@ form {
   padding: 1rem;
   background-color: #c6cdd5;
   border-radius: 0.25rem;
+  height: 100vh;
+}
+
+.messagemail {
+  max-height: 500px;
 }

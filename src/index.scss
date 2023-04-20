@@ -492,12 +492,14 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
-
-// Style pour le formulaire complet
 form {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
   background-color: $light-color;
   border-radius: 0.25rem;
+ height: 100vh;
+}
+.messagemail{
+   max-height:500px;
 }
