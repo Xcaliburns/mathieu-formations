@@ -106,7 +106,7 @@ input {
 .Header {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   padding: 2rem;
   width: 100%;
@@ -114,6 +114,10 @@ input {
   border-bottom: 3px solid #666666;
   box-shadow: 0px 20px 18px #666666;
   border-radius: 0px 0px 12px 12px;
+}
+
+.Header .navbar-logo {
+  display: flex;
 }
 
 .Header .Navbar {

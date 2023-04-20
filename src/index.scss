@@ -141,7 +141,7 @@ $roll-color: #f0f2f6;
 .Header {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   padding: 2rem;
   width: 100%;
@@ -150,14 +150,11 @@ $roll-color: #f0f2f6;
   border-bottom: 3px solid $dark-color;
   box-shadow: 0px 20px 18px $dark-color;
   border-radius: 0px 0px 12px 12px;
-  //    .navbar-logo{
-  //         font-size: 3rem;
-  //         color:white;
-  //         margin-bottom: 2rem;
-  //         margin-left: 3rem;
-  //         margin-top: 2rem;
-  //         width:15%;
-  //     }
+     .navbar-logo{
+      display:flex;   
+        
+         
+      }
   .Navbar {
     width: 100%;
     display: flex;
