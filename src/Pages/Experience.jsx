@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Navbar from "../Components/Navbar";
 import Photo from "../assets/photoMathieu.png";
+import Footer from "../Components/Footer";
 
 function Experience() {
   const [gestionnaire, setGestionnaire] = useState(false);
@@ -175,6 +176,7 @@ function Experience() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
