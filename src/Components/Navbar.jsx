@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/Sans-titre-1.svg";
-import Home from "../assets/home.svg";
+import Sondage from "../assets/Sondage.svg";
 import Envelope from "../assets/envelope.svg";
 import Photo from "../assets/photo.svg";
 import Valise from "../assets/briefcase.svg";
@@ -33,8 +33,14 @@ function Navbar() {
         </li>
         <li className="Navbar-item">
           {" "}
-          <Link to="/contact" className="nav-link">
+          <Link to="/mail" className="nav-link">
             <img className="contact-icon" alt="contact-icon" src={Envelope} />
+          </Link>
+        </li>
+           <li className="Navbar-item">
+          {" "}
+          <Link to="/contact" className="nav-link">
+            <img className="cv-icon" alt="cv-icon" src={Sondage} />
           </Link>
         </li>
       </ul>
