@@ -2,6 +2,7 @@ import React, { useRef,  } from "react";
 import Navbar from "../Components/Navbar";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
+import Footer from "../Components/Footer";
 const serviceId = import.meta.env.VITE_SERVICE_ID_CONTACT;
 const templateId = import.meta.env.VITE_TEMPLATE_CONTACT_KEY;
 const publicKey = import.meta.env.VITE_PUBLIC_KEY_CONTACT;
@@ -55,6 +56,7 @@ function MailContact() {
             <input type="submit" value="Send" />
           </form>      
       </div>
+      <Footer />
     </div>
   );
 }

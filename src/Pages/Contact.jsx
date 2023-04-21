@@ -1,5 +1,6 @@
 import React, { useRef, useState,useEffect } from "react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -145,6 +146,7 @@ function Contact() {
           </div>
         }
       </div>
+      <Footer />{" "}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Photo from "../assets/photoMathieu.png"
+import Footer from "../Components/Footer";
+
 function Accueil() {
         // localStorage.setItem("validate",true);
         // localStorage.setItem("validate",false);
@@ -33,6 +34,8 @@ function Accueil() {
         </div></div></div> 
         
       </div>
+     <Footer />
+      
     </div>
   );
 }
