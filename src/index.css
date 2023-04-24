@@ -146,12 +146,14 @@ a {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
+  color: #1c180c;
 }
 
 .Accueil .background-section {
   width: 100%;
-  height: 100vh;
-  background-image: url("https://cdn.pixabay.com/photo/2017/09/16/11/11/truck-2755172_960_720.jpg");
+  min-height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/24/16/07/truck-2677373_960_720.jpg");
   background-size: cover;
   background-position-x: 45%;
   background-position-y: 100%;
@@ -166,8 +168,7 @@ a {
   margin-bottom: 2vh;
 }
 
-.Accueil .background-section .slogan margin
-.photo {
+.Accueil .background-section .slogan .photo {
   border-radius: 40%;
   scale: 0.5;
   height: fit-content;
@@ -186,10 +187,9 @@ a {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
   width: fit-content;
-  color: black;
-  font-size: 7vw;
+  color: #1c180c;
+  font-size: 1.6rem;
   text-decoration-line: overline underline;
   text-decoration-color: black;
   text-decoration-thickness: 3px;
@@ -200,8 +200,8 @@ a {
 }
 
 .Accueil .background-section .slogan .slogan-texte .slogan-type {
-  color: black;
-  font-size: 3vw;
+  color: #1c180c;
+  font-size: 1rem;
   text-align: start;
   height: 10%;
   margin-bottom: 5%;
@@ -216,7 +216,7 @@ a {
 
 .Accueil .background-section .accroche .free1 {
   font-weight: bolder;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: left;
   display: flex;
   align-items: center;
@@ -228,7 +228,7 @@ a {
 
 .Accueil .background-section .accroche .free2 {
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -244,10 +244,12 @@ a {
   justify-content: flex-start;
   font-weight: bolder;
   font-size: 1.2rem;
-  height: 5vh;
+  height: fit content;
   padding-left: 5vh;
-  margin-bottom: 12%;
+  margin-top: 120px;
+  margin-bottom: 10vh;
   line-height: 32px;
+  color: #9d9b9b;
 }
 
 .Accueil .background-section .badges {
@@ -256,7 +258,7 @@ a {
   align-items: center;
   height: 100%;
   margin-top: 125px;
-  padding-bottom: 5%;
+  margin-bottom: 10vh;
 }
 
 .Accueil .background-section .badges .badge-bpcaser {
@@ -515,4 +517,36 @@ form {
 
 .leaf {
   scale: 0.15;
+}
+
+@media screen and (min-width: 1200px) {
+  .Accueil {
+    height: 100%;
+    color: white;
+  }
+  .slogan {
+    padding-top: 20px;
+  }
+  .slogan-titre {
+    font-size: 5rem !important;
+    background-color: rgba(249, 245, 245, 0.2);
+    border-radius: 12px !important;
+  }
+  .slogan-type {
+    font-size: 2rem !important;
+    color: #f0f2f6 !important;
+  }
+  .free1 {
+    font-size: 3rem !important;
+  }
+  .free2 {
+    font-size: 2.2rem !important;
+  }
+  .free3 {
+    font-size: 2rem !important;
+    width: 50% !important;
+  }
+  .badges {
+    margin-top: 25px !important;
+  }
 }

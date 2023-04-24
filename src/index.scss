@@ -107,15 +107,18 @@ input {
   -webkit-appearance: none;
   border-radius: 0;
 }
-a{  color: inherit;
-      text-decoration: none;}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 // variables
 
 $navbarColor: #362e17;
 $primaryColor: #a08945;
 $shadowColor: #362e17;
+$mobileFontColor: #1c180c;
 $fontsize: 1vw;
 $fontsizelarge: 3vw;
 
@@ -134,6 +137,7 @@ $roll-color: #f0f2f6;
   border-radius: 12px;
   box-shadow: 8px 10px 20px $shadowColor;
 }
+
 @mixin underline-text($shadowColor) {
   padding-left: 12%;
   text-decoration: solid underline 2px $shadowColor;
@@ -153,11 +157,11 @@ $roll-color: #f0f2f6;
   border-bottom: 3px solid $dark-color;
   box-shadow: 0px 20px 18px $dark-color;
   border-radius: 0px 0px 12px 12px;
-     .navbar-logo{
-      display:flex;   
-        
-         
-      }
+
+  .navbar-logo {
+    display: flex;
+  }
+
   .Navbar {
     width: 100%;
     display: flex;
@@ -181,22 +185,25 @@ $roll-color: #f0f2f6;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  // overflow-y: hidden;
+  overflow-y: hidden;
+  color: $mobileFontColor;
+
   .background-section {
     width: 100%;
-    height: 100vh;
-    background-image: url("https://cdn.pixabay.com/photo/2017/09/16/11/11/truck-2755172_960_720.jpg");
+    min-height: 100vh;
+    // background-image: url("https://cdn.pixabay.com/photo/2017/09/16/11/11/truck-2755172_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/24/16/07/truck-2677373_960_720.jpg");
     background-size: cover;
     background-position-x: 45%;
     background-position-y: 100%;
     position: relative;
     box-sizing: border-box;
+
     .slogan {
       display: flex;
       flex-direction: column;
       height: 20vh;
-      margin-bottom:2vh;
-      margin
+      margin-bottom: 2vh;
 
       .photo {
         border-radius: 40%;
@@ -204,6 +211,7 @@ $roll-color: #f0f2f6;
         height: fit-content;
         width: fit-content;
       }
+
       .slogan-texte {
         width: 90%;
         height: 50%;
@@ -215,10 +223,9 @@ $roll-color: #f0f2f6;
           display: inline-block;
           justify-content: center;
           align-items: center;
-          background-color: transparent;
           width: fit-content;
-          color: black;
-          font-size: 7vw;
+          color: $mobileFontColor;
+          font-size: 1.6rem;
           text-decoration-line: overline underline;
           text-decoration-color: black;
           text-decoration-thickness: 3px;
@@ -227,112 +234,109 @@ $roll-color: #f0f2f6;
           padding-top: 5vh;
           margin-bottom: 1vw;
         }
+
         .slogan-type {
-          color: black;
-          font-size: 3vw;
+          color: $mobileFontColor;
+          font-size: 1rem;
           text-align: start;
-          height:10%;
+          height: 10%;
           margin-bottom: 5%;
         }
       }
     }
 
-    .accroche{
-        padding-left: 5vh;
-
-       margin-top:15%;
-        display: flex;
-        flex-wrap: wrap;
-       
-    .free1 {
-      font-weight: bolder;
-      font-size:32px;
-     text-align: left;
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      height: 5vh;
-      margin-bottom:5px;
-      margin-right: 1%;
-     
-    }
-     .free2 {
-      font-weight: bolder;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      height: 5vh;
-      line-height: 32px;
-      margin-bottom: 2%;
-      
-    }
-    
-    }
-     .free3 {
-        width: 90%;
-        height: 40%;
-        display: flex;
-        justify-content: flex-start;
-      font-weight: bolder;
-      font-size: 1.2rem;     
-      height: 5vh;
+    .accroche {
       padding-left: 5vh;
-      margin-bottom: 12%;
-      
-      line-height: 32px;
-      
-
-    }
-    .badges{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height:100%;
-       margin-top:125px;
-       padding-bottom: 5%;
-        
-       
-        
-
-    .badge-bpcaser{
-        display:flex; 
-        justify-content: center;
-        align-items: center;
-        color:#f0f2f6;
-        font-size: 2rem;
-          background-color: $dark-color;
-           width: 10rem;
-        height: 10rem;
-        border-radius: 50%;
-        
-    }    
-    .reussite {
-     
+      margin-top: 15%;
       display: flex;
-      justify-content: flex-end;
-      font-size: 2rem;
-      margin-right: 3%;
+      flex-wrap: wrap;
 
-      .xp-texte {
+      .free1 {
+        font-weight: bolder;
+        font-size: 2rem;
+        text-align: left;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: left;
+        height: 5vh;
+        margin-bottom: 5px;
+        margin-right: 1%;
+      }
+
+      .free2 {
+        font-weight: bolder;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        height: 5vh;
+        line-height: 32px;
+        margin-bottom: 2%;
+      }
+    }
+
+    .free3 {
+      width: 90%;
+      height: 40%;
+      display: flex;
+      justify-content: flex-start;
+      font-weight: bolder;
+      font-size: 1.2rem;
+      height: fit content;
+      padding-left: 5vh;
+      margin-top: 120px;
+      margin-bottom: 10vh;
+      line-height: 32px;
+      color: #9d9b9b;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      margin-top: 125px;
+      margin-bottom: 10vh;
+
+      .badge-bpcaser {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        color: #f0f2f6;
+        font-size: 2rem;
+        background-color: $dark-color;
         width: 10rem;
         height: 10rem;
         border-radius: 50%;
-        background-color: $dark-color;
-        margin-right: 5%;
-        color: aliceblue;
-        line-height: 40px;
       }
-      .xp-pourcent {
+
+      .reussite {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-end;
+        font-size: 2rem;
+        margin-right: 3%;
+
+        .xp-texte {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 10rem;
+          height: 10rem;
+          border-radius: 50%;
+          background-color: $dark-color;
+          margin-right: 5%;
+          color: aliceblue;
+          line-height: 40px;
+        }
+
+        .xp-pourcent {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
-    }}
+    }
   }
 }
 
@@ -340,13 +344,16 @@ $roll-color: #f0f2f6;
   display: flex;
   flex-direction: column;
   background-color: $light-color;
+
   .date {
     padding-bottom: 10px;
   }
+
   .centre {
     display: flex;
     padding-bottom: 7px;
   }
+
   .fonction {
     font-size: 1rem;
     padding-bottom: 3px;
@@ -355,15 +362,18 @@ $roll-color: #f0f2f6;
   .CV {
     display: flex;
     flex-direction: column;
+
     .col1 {
       display: flex;
       flex-direction: column;
       width: 100%;
       align-items: center;
+
       .metier {
         font-size: 0.9rem;
         margin-bottom: 3%;
       }
+
       .name {
         display: flex;
         flex-direction: row;
@@ -372,6 +382,7 @@ $roll-color: #f0f2f6;
         width: 100%;
         font-size: 1.5rem;
         margin-bottom: 3%;
+
         .photo {
           @include standard-box($shadowColor);
           scale: 0.75;
@@ -398,6 +409,7 @@ $roll-color: #f0f2f6;
         color: $roll-color;
       }
     }
+
     .col2 {
       align-items: left;
       display: flex;
@@ -406,6 +418,7 @@ $roll-color: #f0f2f6;
       width: 100%;
       margin-top: 2rem;
       text-align: left;
+
       .underline-txt {
         @include underline-text($shadowColor);
         margin-bottom: 1%;
@@ -418,6 +431,7 @@ $roll-color: #f0f2f6;
         flex-direction: column;
         justify-content: center;
       }
+
       .roll-group {
         display: flex;
         flex-direction: column;
@@ -425,6 +439,7 @@ $roll-color: #f0f2f6;
         align-items: center;
         margin-top: 25px;
       }
+
       .roll {
         display: flex;
         align-items: center;
@@ -439,11 +454,13 @@ $roll-color: #f0f2f6;
         background-color: $roll-color;
         cursor: pointer;
       }
+
       .roll:hover,
       .roll:focus {
         border-color: $main-color;
         box-shadow: 0 0 50px 3px $main-color;
       }
+
       .unroll {
         display: block;
         border: 1px solid $dark-color;
@@ -454,10 +471,12 @@ $roll-color: #f0f2f6;
         margin-left: 5%;
         margin-right: 5%;
       }
+
       .experience-section {
         margin-bottom: 5%;
         font-size: 3vw;
       }
+
       .competence {
         margin-bottom: 5%;
         font-size: 3vw;
@@ -465,7 +484,10 @@ $roll-color: #f0f2f6;
     }
   }
 }
-.mailcontact{height:96vh;}
+
+.mailcontact {
+  height: 96vh;
+}
 
 label {
   display: block;
@@ -473,7 +495,6 @@ label {
   margin-bottom: 0.5rem;
   color: $secondary-color;
 }
-
 
 input,
 textarea {
@@ -485,7 +506,6 @@ textarea {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-
 
 input:hover,
 input:focus,
@@ -504,32 +524,77 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
+
 form {
- max-width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 1rem;
   background-color: $light-color;
   border-radius: 0.25rem;
-
 }
 
+.mailcontact {
+  height: 100vh;
 
-.mailcontact{
-   height:100vh;
-  textarea{
+  textarea {
     height: 24vh;
   }
 }
 
-.footer{
-  display:flex;
+.footer {
+  display: flex;
   justify-content: space-around;
   align-items: center;
-    height:40px;
+  height: 40px;
   background-color: $secondary-color;
-
- 
 }
-.leaf{
-  scale:0.15
+
+.leaf {
+  scale: 0.15;
+}
+
+@media screen and (min-width:1200px) {
+ .Accueil{
+  height: 100% ;
+   color:white;   
+   
+  } 
+  .slogan{padding-top: 20px;}
+   .slogan-titre {
+         
+         
+        
+       
+       
+        
+          font-size: 5rem !important;
+          background-color: rgba(249, 245, 245, 0.2) ;
+          border-radius: 12px !important;
+       
+      
+      
+        
+        
+        }
+           .slogan-type {
+         
+          font-size:2rem !important;
+          color:$roll-color !important;
+         
+        }
+        .free1{
+          font-size: 3rem !important;
+        }
+
+        .free2{
+          font-size: 2.2rem !important;
+        }
+        .free3{
+          font-size: 2rem !important;
+          width: 50% !important;
+        }
+        .badges{
+          margin-top:25px !important;
+        }
+
 }
