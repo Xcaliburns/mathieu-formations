@@ -467,7 +467,6 @@ $roll-color: #f0f2f6;
 }
 .mailcontact{height:96vh;}
 
-// Style de base pour les labels
 label {
   display: block;
   font-weight: bold;
@@ -475,7 +474,7 @@ label {
   color: $secondary-color;
 }
 
-// Style de base pour les inputs et les textarea
+
 input,
 textarea {
   display: block;
@@ -487,7 +486,7 @@ textarea {
   margin-bottom: 1rem;
 }
 
-// Style pour les inputs en état :hover et :focus
+
 input:hover,
 input:focus,
 textarea:hover,
@@ -506,15 +505,20 @@ button {
   cursor: pointer;
 }
 form {
-  max-width: 600px;
+ max-width: 500px;
   margin: 0 auto;
   padding: 1rem;
   background-color: $light-color;
   border-radius: 0.25rem;
- height: 100vh;
+
 }
-.messagemail{
-   max-height:500px;
+
+
+.mailcontact{
+   height:100vh;
+  textarea{
+    height: 24vh;
+  }
 }
 
 .footer{

@@ -13,7 +13,7 @@ function Contact() {
   const [validation, setValidation] = useState(
     localStorage.getItem("validate")
   );
-  // localStorage.setItem("validate", false);
+  
   const form = useRef();
   const navigate = useNavigate();
   const sendEmail = (e) => {
@@ -40,13 +40,13 @@ function Contact() {
    useEffect(() => {
     if(validation === "true" ){navigate("/")}
     return () => {
-      // Nettoyage des ressources ou des effets
+      
     };
   }, []);
   console.log(typeof localStorage.getItem("validate"));
   console.log(typeof validation);
   return (
-    <div>
+    <div className="sondage">
       <Navbar />{" "}
       <div className="contact">
         {" "}
