@@ -9,10 +9,11 @@ function Accueil() {
   
   return (
     <div className="Accueil">
-      <Navbar />
+      <Navbar /> <section className="slogan-section">
       <div className="background-section">
+       
         <div className="slogan">
-          {/* <img src={Photo} alt="photo" className="photo"  /> */}
+        
           <div className="slogan-texte">
         <h1 className="slogan-titre">
            Mathieu Formation
@@ -33,7 +34,7 @@ function Accueil() {
 
         </div></div></div> 
         
-      </div>
+      </div></section>
      <Footer />
       
     </div>
