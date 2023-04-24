@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 
 function Accueil() {
         // localStorage.setItem("validate",true);
-        // localStorage.setItem("validate",false);
+       // localStorage.setItem("validate",false);
   console.log(localStorage.getItem('validate'));
   
   return (

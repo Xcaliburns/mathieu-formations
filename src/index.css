@@ -490,16 +490,19 @@ button {
 }
 
 form {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 1rem;
   background-color: #c6cdd5;
   border-radius: 0.25rem;
+}
+
+.mailcontact {
   height: 100vh;
 }
 
-.messagemail {
-  max-height: 500px;
+.mailcontact textarea {
+  height: 24vh;
 }
 
 .footer {
